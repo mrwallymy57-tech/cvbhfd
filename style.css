@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Amiri', 'Tajawal', 'Segoe UI', 'Tahoma', system-ui, sans-serif;
+    background: linear-gradient(145deg, #f9f3e6 0%, #fff4e4 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.bg-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 10% 20%, rgba(255, 215, 150, 0.15) 2%, transparent 2.5%),
+                      radial-gradient(circle at 85% 65%, rgba(210, 170, 90, 0.12) 1.8%, transparent 2.2%);
+    background-size: 55px 55px, 70px 70px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.card {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    width: 100%;
+    background: rgba(255, 255, 245, 0.96);
+    backdrop-filter: blur(1px);
+    border-radius: 68px 48px 88px 48px;
+    box-shadow: 0 35px 65px rgba(160, 110, 40, 0.2), 0 0 0 1px rgba(255, 235, 190, 0.6);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    animation: fadeUp 0.9s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.card:hover {
+    transform: scale(1.01);
+}
+
+.hero {
+    background: linear-gradient(135deg, #2a7221 0%, #3c8c2c 40%, #f7c56e 100%);
+    padding: 35px 20px 45px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    position: relative;
+}
+
+.moon-stars {
+    font-size: 4.5rem;
+    letter-spacing: 12px;
+    animation: glowPulse 2s infinite alternate;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    color: #fffaec;
+    text-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #fff2cf;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    padding: 6px 18px;
+    border-radius: 60px;
+    backdrop-filter: blur(2px);
+}
+
+.content {
+    padding: 35px 28px 45px;
+}
+
+.greeting-text {
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(120deg, #b97f2e, #5e3a1a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.message {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: #2c241a;
+    background: #fffef7;
+    padding: 20px;
+    border-radius: 50px 28px 50px 28px;
+    box-shadow: inset 0 1px 4px #ffe1a0, 0 8px 18px rgba(0, 0, 0, 0.05);
+    margin-bottom: 35px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.personal-card {
+    background: #fef5e3;
+    border-radius: 48px 28px 48px 28px;
+    padding: 20px 22px;
+    margin-bottom: 35px;
+    box-shadow: 0 6px 14px rgba(100, 60, 10, 0.1);
+    border: 1px solid #ffdfaa;
+}
+
+.personal-card h3 {
+    font-size: 1.4rem;
+    color: #7a4c1c;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.input-group input, .input-group textarea {
+    padding: 14px 18px;
+    font-size: 1rem;
+    border: 2px solid #f0dbb4;
+    border-radius: 60px;
+    background: white;
+    font-family: inherit;
+    outline: none;
+    transition: 0.2s;
+    text-align: center;
+}
+
+.input-group textarea {
+    border-radius: 28px;
+    resize: vertical;
+    text-align: right;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    border-color: #e6b45e;
+    box-shadow: 0 0 0 3px rgba(230, 180, 94, 0.2);
+}
+
+.btn-eid {
+    background: #d99e3e;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.btn-eid:hover {
+    background: #b87a2c;
+    transform: scale(0.97);
+}
+
+.custom-message {
+    margin-top: 18px;
+    background: #ffffffd9;
+    padding: 15px;
+    border-radius: 32px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #3f2b12;
+    border-right: 6px solid #f5bc70;
+    transition: all 0.2s;
+}
+
+.share-section {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px dashed #f1dcb2;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.share-btn {
+    background: #fff1df;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.2s;
+    color: #5a3a1a;
+    border: 1px solid #e7ca94;
+}
+
+.share-btn:hover {
+    background: #f7e2c6;
+    transform: translateY(-3px);
+}
+
+.footer {
+    background: #f6ebd4;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.8rem;
+    color: #a47e48;
+    font-weight: 500;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 2px gold;
+        opacity: 0.9;
+    }
+    100% {
+        text-shadow: 0 0 18px #ffdd99;
+        opacity: 1;
+    }
+}
+
+.confetti-piece {
+    position: fixed;
+    font-size: 1.4rem;
+    pointer-events: none;
+    z-index: 999;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+    .greeting-text {
+        font-size: 1.4rem;
+    }
+    .content {
+        padding: 25px 18px;
+    }
+  }
