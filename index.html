@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>تهاني عيد الفطر المبارك</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-pattern"></div>
+<div class="card">
+    <div class="hero">
+        <div class="moon-stars">🌙✨⭐🌙</div>
+        <h1>عيد فطر مبارك</h1>
+        <p>كل عام وأنتم بخير</p>
+    </div>
+    <div class="content">
+        <div class="greeting-text">
+            🌸 تقبل الله طاعاتكم 🌸
+        </div>
+        <div class="message" id="staticMessage">
+            نسأل الله أن يعيد عليكم هذه المناسبة المباركة باليمن والبركات،
+            ويملأ قلوبكم فرحًا وسرورًا، ويجمعكم بالأهل والأحباب في طاعة ومحبة.
+            كل عام وأنتم إلى الله أقرب.
+        </div>
+
+        <div class="personal-card">
+            <h3>🎁 أرسل تهنية خاصة 🎁</h3>
+            <div class="input-group">
+                <input type="text" id="friendName" placeholder="اسم الشخص / صديقك" value="أخي الحبيب">
+                <textarea id="customEidMsg" rows="2" placeholder="اكتب تهانيتك الخاصة...">أسأل الله لك السعادة والهناء، عيد فطر سعيد 🌙💚</textarea>
+                <button class="btn-eid" id="sendGreetingBtn">🌟 أرسل التهنئة 🌟</button>
+            </div>
+            <div id="customOutput" class="custom-message" style="display: none;"></div>
+        </div>
+
+        <div class="share-section">
+            <div class="share-buttons">
+                <button class="share-btn" id="whatsappShare">📱 واتساب</button>
+                <button class="share-btn" id="copyLinkBtn">📋 نسخ التهنئة</button>
+            </div>
+            <p style="font-size: 12px; margin-top: 12px;">✨ شارك الفرحة مع أحبابك ✨</p>
+        </div>
+    </div>
+    <div class="footer">
+        🌙 أعاده الله علينا وعليكم بالخير واليمن والبركات 🌙
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+  </html>
